@@ -36,10 +36,6 @@ jobs:
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
 
-      # Build application
-      - name: Build with Maven
-        run: mvn clean verify
-
       # SonarQube Analysis
       - name: SonarQube Scan
         env:
